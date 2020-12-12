@@ -7,6 +7,7 @@ const app = express();
 const PORT = process.env.PORT;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('public'));
 
 //Router
 require("./routes/apiRoutes")(app);
