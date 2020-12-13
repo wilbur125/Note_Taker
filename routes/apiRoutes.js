@@ -1,6 +1,5 @@
 const dbData = require("../db/db.json");
 const fs = require("fs");
-const util = require("util");
 const { v4: uuidv4 } = require('uuid');
 
 module.exports = function(app) {
@@ -27,7 +26,7 @@ module.exports = function(app) {
         fs.writeFile("./db/db.json", JSON.stringify(allNotes, null, 2), err => {
         if (err) throw err;
         res.send(data);
-        console.log("Note created!");
+        console.log("Note created!")    
         });
     });
     });
